@@ -54,7 +54,7 @@ export default function Movies({ tv = false }: { tv?: boolean }) {
       <div className='pt-20 py-10 container'>
          <form
             onSubmit={handleSearch}
-            className='flex items-center overflow-hidden rounded bg-slate-600 h-10 max-w-xs ml-auto'
+            className='flex items-center overflow-hidden rounded bg-slate-600 h-10 w-full sm:max-w-xs ml-auto'
          >
             <input
                {...register('search')}
