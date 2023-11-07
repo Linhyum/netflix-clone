@@ -181,6 +181,7 @@ export default function Header() {
                <nav className='flex flex-col gap-y-8 text-base font-bold'>
                   {nav.map((item) => (
                      <Link
+                        onClick={() => setToggleMenuMobile(false)}
                         href={item.url}
                         className={`transition-all flex items-center gap-x-2 ${
                            pathname === item.url ? 'text-primary' : 'hover:text-primary'
