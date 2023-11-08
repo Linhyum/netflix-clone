@@ -23,6 +23,7 @@ export default function Favourite() {
                <img
                   src='https://cdni.iconscout.com/illustration/premium/thumb/no-transaction-7359562-6024630.png'
                   alt='no-favourite'
+                  loading='lazy'
                   className='w-80 h-[265px] mt-5 object-cover mx-auto'
                />
                {/* eslint-disable-next-line react/no-unescaped-entities */}

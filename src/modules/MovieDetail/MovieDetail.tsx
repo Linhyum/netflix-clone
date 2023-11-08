@@ -58,6 +58,7 @@ export default function MovieDetail({ params, tv = false }: { params: { id: numb
                <div className='w-[75%] sm:w-1/2 md:w-[25%] mx-auto md:mx-0 aspect-[2/3] flex-shrink-0'>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
+                     loading='lazy'
                      src={getImg(movieDetail.poster_path)}
                      alt={tv ? movieDetail.name : movieDetail.title}
                      className='w-full h-full object-cover rounded-lg'
@@ -234,6 +235,7 @@ export default function MovieDetail({ params, tv = false }: { params: { id: numb
                            <div className='aspect-[2/3] relative rounded-lg overflow-hidden group'>
                               {/* eslint-disable-next-line @next/next/no-img-element */}
                               <img
+                                 loading='lazy'
                                  src={getImg(item.profile_path)}
                                  alt={item.name}
                                  className='w-full group-hover:scale-110 transition-all duration-300 h-full object-cover'

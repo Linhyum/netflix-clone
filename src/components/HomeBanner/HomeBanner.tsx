@@ -115,6 +115,7 @@ export default function HomeBanner({ popular }: { popular: Result[] }) {
                            {/* eslint-disable-next-line @next/next/no-img-element */}
                            <img
                               src={getImg(item.poster_path)}
+                              loading='lazy'
                               alt={item.title}
                               className='w-full h-full object-cover rounded-lg'
                            />

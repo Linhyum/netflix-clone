@@ -15,6 +15,7 @@ export default function MovieItem({ item }: Props) {
          <img
             src={getImg(item.poster_path)}
             alt={item.name || item.title}
+            loading='lazy'
             className='w-full h-full object-cover group-hover:scale-110 transition-all duration-300'
          />
          <div className='absolute bottom-0 bg-gradient h-1/2 inset-x-0 p-3 gap-y-2 flex flex-col items-center justify-end'>
