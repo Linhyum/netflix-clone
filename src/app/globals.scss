@@ -10,6 +10,14 @@
    padding-right: 12px;
 }
 
+a,
+button,
+select,
+textarea,
+input {
+   -webkit-tap-highlight-color: transparent;
+}
+
 .hide-scroll::-webkit-scrollbar {
    width: 0;
 }

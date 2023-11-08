@@ -68,7 +68,7 @@ export default function MovieDetail({ params, tv = false }: { params: { id: numb
                   <h2 className='font-bold text-3xl'>{tv ? movieDetail.name : movieDetail.title}</h2>
                   <p>{movieDetail.overview}</p>
                   <span>Release Date: {tv ? movieDetail.first_air_date : movieDetail.release_date}</span>
-                  <div className='flex items-center gap-x-3'>
+                  <div className='flex items-center flex-wrap gap-3'>
                      {movieDetail.genres.map((item) => (
                         <div className='border-2 border-white rounded-full py-2 px-4' key={item.id}>
                            {item.name}
@@ -113,7 +113,7 @@ export default function MovieDetail({ params, tv = false }: { params: { id: numb
                         {movieDetail.vote_count}
                      </div>
                   </div>
-                  <div className='flex items-center gap-x-5'>
+                  <div className='flex items-center flex-wrap gap-5'>
                      <Link
                         href={`/${tv ? 'tv' : 'movie'}/${movieDetail.id}#trailer`}
                         className='flex font-semibold items-center btn gap-x-2 bg-primary py-3 px-4 rounded'
