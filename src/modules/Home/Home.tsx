@@ -10,7 +10,8 @@ export default function Home() {
    const { data } = useQuery({
       queryKey: ['popular'],
       queryFn: () => getPopular('movie', 1),
-      staleTime: 1000 * 60
+      staleTime: 1000 * 60 * 5,
+      cacheTime: 1000 * 60 * 10
    })
    const popular = data?.data.results
 
@@ -18,7 +19,8 @@ export default function Home() {
    const { data: data2 } = useQuery({
       queryKey: ['trending'],
       queryFn: () => getTrending('movie'),
-      staleTime: 1000 * 60
+      staleTime: 1000 * 60 * 5,
+      cacheTime: 1000 * 60 * 10
    })
    const trending = data2?.data.results
 
@@ -26,7 +28,8 @@ export default function Home() {
    const { data: data3 } = useQuery({
       queryKey: ['topRated'],
       queryFn: () => getTopRated('movie'),
-      staleTime: 1000 * 60
+      staleTime: 1000 * 60 * 5,
+      cacheTime: 1000 * 60 * 10
    })
    const topRated = data3?.data.results
 
@@ -34,7 +37,8 @@ export default function Home() {
    const { data: data4 } = useQuery({
       queryKey: ['popularTV'],
       queryFn: () => getPopular('tv', 1),
-      staleTime: 1000 * 60
+      staleTime: 1000 * 60 * 5,
+      cacheTime: 1000 * 60 * 10
    })
    const popularTV = data4?.data.results
 
@@ -42,7 +46,8 @@ export default function Home() {
    const { data: data5 } = useQuery({
       queryKey: ['trendingTV'],
       queryFn: () => getTrending('tv'),
-      staleTime: 1000 * 60
+      staleTime: 1000 * 60 * 5,
+      cacheTime: 1000 * 60 * 10
    })
    const trendingTV = data5?.data.results
 
@@ -50,7 +55,8 @@ export default function Home() {
    const { data: data6 } = useQuery({
       queryKey: ['topRatedTV'],
       queryFn: () => getTopRated('tv'),
-      staleTime: 1000 * 60
+      staleTime: 1000 * 60 * 5,
+      cacheTime: 1000 * 60 * 10
    })
    const topRatedTV = data6?.data.results
    if (!popular || !trending) return <Loading />

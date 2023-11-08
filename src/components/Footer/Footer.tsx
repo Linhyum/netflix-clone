@@ -22,7 +22,7 @@ const social = [
 export default function Footer() {
    return (
       <footer
-         className='bg-none bg-cover bg-center h-[300px] md:h-[150px] relative'
+         className='bg-no-repeat bg-cover bg-center h-[300px] md:h-[150px] relative'
          style={{
             backgroundImage: 'url("https://movies-ax.netlify.app/static/media/background.4791eb57.jpg")'
          }}
